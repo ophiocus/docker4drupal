@@ -1,0 +1,8 @@
+uuid: bebe6763-6ada-44b5-b561-c88a56d62364
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: U5VlGjd_SfV0Qm_EfnaynOfc549cNscFAx48JfYoMRI
+id: default
+label: Default
