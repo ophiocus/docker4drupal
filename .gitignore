@@ -1,2 +1,7 @@
 .idea/
 .docker-sync/
+vendor/
+relroot/*
+!relroot/www/web/modules/custom/
+!relroot/www/web/themes/custom/
+
