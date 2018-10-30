@@ -5,6 +5,7 @@ relroot/*
 !relroot/www/
 
 relroot/www/*
+!relroot/www/composer.json
 !relroot/www/web/
 
 relroot/www/web/*
