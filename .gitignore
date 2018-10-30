@@ -2,6 +2,19 @@
 .docker-sync/
 vendor/
 relroot/*
+!relroot/www/
+
+relroot/www/*
+!relroot/www/web/
+
+relroot/www/web/*
+!relroot/www/web/modules/
+!relroot/www/web/themes/
+
+relroot/www/web/modules/*
+relroot/www/web/themes/*
+
 !relroot/www/web/modules/custom/
 !relroot/www/web/themes/custom/
+
 
