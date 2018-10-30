@@ -10,9 +10,9 @@ services:
       MYSQL_DATABASE: $DB_NAME
       MYSQL_USER: $DB_USER
       MYSQL_PASSWORD: $DB_PASSWORD
-#    volumes:
+    volumes:
 #      - ./mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here.
-#      - /path/to/mariadb/data/on/host:/var/lib/mysql # Use bind mount
+      - $CUSTOM_DB:/var/lib/mysql # Use bind mount
 
   php:
     image: wodby/drupal-php:$PHP_TAG
@@ -35,7 +35,7 @@ services:
 #      PHP_XDEBUG_REMOTE_HOST: 10.254.254.254 # macOS, Docker < 18.03
 #      PHP_XDEBUG_REMOTE_HOST: 10.0.75.1 # Windows, Docker < 18.03
     volumes:
-      - ./:/var/www/html
+      - $CUSTOM_WWW:/var/www/html
 ## For macOS users (https://wodby.com/stacks/drupal/docs/local/docker-for-mac/)
 #      - ./:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
@@ -56,7 +56,7 @@ services:
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
 #      NGINX_DRUPAL_FILE_PROXY_URL: http://example.com
     volumes:
-      - ./:/var/www/html
+      - $CUSTOM_WWW:/var/www/html
 # For macOS users (https://wodby.com/stacks/drupal/docs/local/docker-for-mac/)
 #      - ./:/var/www/html:cached # User-guided caching
 #      - docker-sync:/var/www/html # Docker-sync
