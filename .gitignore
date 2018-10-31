@@ -17,13 +17,18 @@ relroot/www/web/*
 !relroot/www/web/modules/
 !relroot/www/web/themes/
 
-### SUITE CRM
-!relroot/www/web/crm/
-
 relroot/www/web/modules/*
 relroot/www/web/themes/*
 
 !relroot/www/web/modules/custom/
 !relroot/www/web/themes/custom/
+
+### SUITE CRM
+!relroot/www/web/crm/
+
+relroot/www/web/crm/install.log
+relroot/www/web/crm/suitecrm.log
+relroot/www/web/crm/cache/*
+
 
 
